@@ -4,9 +4,9 @@ import { GameProvider, useGame } from './components/GameContext';
 import { Layout } from './components/Layout';
 import { ModuleCard } from './components/ModuleCard';
 import { MODULES } from './data/modules';
-import { ModuleId, Question } from './types';
-import { Trophy, BookOpen, Play, AlertCircle, CheckCircle, RotateCcw, Star } from 'lucide-react';
-import { PASSING_SCORE, QUESTIONS_PER_QUIZ, BADGES } from './constants';
+import { ModuleId, LearningModule } from './types';
+import { Trophy, Play, AlertCircle, RotateCcw, Star } from 'lucide-react';
+import { PASSING_SCORE, BADGES } from './constants';
 
 // -- Sub-components defined here to keep single-file structure where possible for simplicity --
 
@@ -336,7 +336,7 @@ const DashboardScreen = ({ onSelectModule }: { onSelectModule: (id: ModuleId) =>
 
       {/* Modules Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {(Object.values(MODULES) as any[]).map((module) => (
+        {(Object.values(MODULES) as LearningModule[]).map((module) => (
           <ModuleCard 
             key={module.id}
             id={module.id}
