@@ -36,11 +36,12 @@ export const ModuleCard: React.FC<ModuleCardProps> = ({ id, title, description, 
 
   return (
     <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-all duration-300 flex flex-col h-full group hover:border-unad-primary/30">
-      <div className="relative h-48 overflow-hidden">
-        {/* Background Image */}
+      <div className="relative h-48 overflow-hidden bg-slate-200">
+        {/* Background Image with referrerPolicy fix */}
         <img 
           src={imageUrl} 
           alt={title} 
+          referrerPolicy="no-referrer"
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
         {/* Overlay gradient */}

@@ -28,10 +28,11 @@ export const Layout: React.FC<LayoutProps> = ({
             className="flex items-center gap-3 cursor-pointer hover:opacity-90 transition-opacity"
             onClick={onNavigateHome}
           >
-            {/* Official UNAD Logo from reliable source */}
+            {/* Official UNAD Logo from reliable source with referrer policy fix */}
             <img 
               src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Logo_unad.png" 
               alt="UNAD Logo" 
+              referrerPolicy="no-referrer"
               className="h-10 w-auto bg-white rounded-md p-0.5"
             />
             <h1 className="text-xl font-bold tracking-tight hidden sm:block">CyberHigiene <span className="text-unad-accent">UNAD</span></h1>

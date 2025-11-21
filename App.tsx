@@ -23,9 +23,11 @@ const LoginScreen = ({ onLogin, onInfo }: { onLogin: (name: string) => void, onI
     <div className="max-w-md mx-auto mt-10 bg-white p-8 rounded-2xl shadow-xl border-t-4 border-unad-accent">
       <div className="text-center mb-8">
         <div className="w-32 h-auto mx-auto mb-6">
+           {/* Add referrerPolicy */}
            <img 
               src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Logo_unad.png" 
               alt="UNAD Logo" 
+              referrerPolicy="no-referrer"
               className="w-full h-full object-contain"
             />
         </div>
@@ -124,8 +126,14 @@ const ContentScreen = ({ moduleId, onStartQuiz, onBack }: { moduleId: ModuleId, 
         ← Volver al Tablero
       </button>
       <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-200">
-        <div className="relative h-64">
-          <img src={module.imageUrl} alt={module.title} className="w-full h-full object-cover" />
+        <div className="relative h-64 bg-slate-200">
+          {/* Add referrerPolicy */}
+          <img 
+            src={module.imageUrl} 
+            alt={module.title} 
+            referrerPolicy="no-referrer"
+            className="w-full h-full object-cover" 
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-unad-primary via-unad-primary/80 to-transparent flex flex-col justify-end p-8">
              <h2 className="text-3xl font-bold mb-2 text-white flex items-center gap-3">
               {module.title}

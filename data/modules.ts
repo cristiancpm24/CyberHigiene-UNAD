@@ -6,7 +6,7 @@ export const MODULES: Record<ModuleId, LearningModule> = {
     id: ModuleId.PASSWORDS,
     title: "Gestión de Contraseñas",
     description: "Aprende a crear claves robustas y gestionarlas de forma segura para evitar intrusiones.",
-    imageUrl: "https://images.unsplash.com/photo-1614064641938-3e8216d1db2d?q=80&w=800&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=800&auto=format&fit=crop", // Matrix code/Lock
     iconName: "KeyRound",
     content: {
       intro: "Las contraseñas son la primera línea de defensa contra el acceso no autorizado a tu información personal y académica.",
@@ -42,7 +42,7 @@ export const MODULES: Record<ModuleId, LearningModule> = {
     id: ModuleId.PHISHING,
     title: "Prevención de Phishing",
     description: "Detecta correos y mensajes fraudulentos diseñados para robar tus credenciales.",
-    imageUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=800&auto=format&fit=crop", // Hacker hoodie
     iconName: "MailWarning",
     content: {
       intro: "El phishing es una técnica de ingeniería social utilizada por ciberdelincuentes para obtener información confidencial como nombres de usuario, contraseñas y detalles de tarjetas de crédito.",
@@ -78,7 +78,7 @@ export const MODULES: Record<ModuleId, LearningModule> = {
     id: ModuleId.WIFI,
     title: "Seguridad en Redes Wi-Fi",
     description: "Navega seguro en redes públicas y configura correctamente tu red doméstica.",
-    imageUrl: "https://images.unsplash.com/photo-1544197150-b99a580bbcbf?q=80&w=800&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=800&auto=format&fit=crop", // Router/Lights
     iconName: "Wifi",
     content: {
       intro: "Las redes Wi-Fi, especialmente las públicas, son canales donde la información puede ser interceptada fácilmente si no se toman precauciones.",
