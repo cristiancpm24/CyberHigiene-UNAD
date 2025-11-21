@@ -1,3 +1,4 @@
+
 export enum ModuleId {
   PASSWORDS = 'passwords',
   PHISHING = 'phishing',
@@ -16,6 +17,7 @@ export interface LearningModule {
   id: ModuleId;
   title: string;
   description: string;
+  imageUrl: string; // Added image URL for visual prototype fidelity
   iconName: string;
   content: {
     intro: string;

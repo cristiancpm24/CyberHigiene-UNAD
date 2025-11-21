@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { GameProvider, useGame } from './components/GameContext';
 import { Layout } from './components/Layout';
@@ -21,8 +22,12 @@ const LoginScreen = ({ onLogin, onInfo }: { onLogin: (name: string) => void, onI
   return (
     <div className="max-w-md mx-auto mt-10 bg-white p-8 rounded-2xl shadow-xl border-t-4 border-unad-accent">
       <div className="text-center mb-8">
-        <div className="w-20 h-20 bg-unad-light text-unad-primary rounded-full flex items-center justify-center mx-auto mb-4 shadow-inner">
-          <BookOpen className="w-10 h-10" />
+        <div className="w-32 h-auto mx-auto mb-6">
+           <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Logo_unad.png" 
+              alt="UNAD Logo" 
+              className="w-full h-full object-contain"
+            />
         </div>
         <h2 className="text-2xl font-bold text-unad-primary">Bienvenido Estudiante</h2>
         <p className="text-slate-500 mt-2">Ingresa tus credenciales para acceder al sistema de capacitación en ciberhigiene.</p>
@@ -119,15 +124,14 @@ const ContentScreen = ({ moduleId, onStartQuiz, onBack }: { moduleId: ModuleId, 
         ← Volver al Tablero
       </button>
       <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-200">
-        <div className="bg-unad-primary text-white p-8 relative overflow-hidden">
-           {/* Abstract shape for branding */}
-           <div className="absolute -right-10 -top-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
-           <div className="relative z-10">
-            <h2 className="text-3xl font-bold mb-2 flex items-center gap-3">
+        <div className="relative h-64">
+          <img src={module.imageUrl} alt={module.title} className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-unad-primary via-unad-primary/80 to-transparent flex flex-col justify-end p-8">
+             <h2 className="text-3xl font-bold mb-2 text-white flex items-center gap-3">
               {module.title}
             </h2>
             <p className="text-blue-100 text-lg max-w-2xl">{module.description}</p>
-           </div>
+          </div>
         </div>
         <div className="p-8">
           <div className="prose max-w-none">
@@ -330,6 +334,7 @@ const DashboardScreen = ({ onSelectModule }: { onSelectModule: (id: ModuleId) =>
             id={module.id}
             title={module.title}
             description={module.description}
+            imageUrl={module.imageUrl}
             iconName={module.iconName}
             isCompleted={user.completedModules.includes(module.id)}
             score={user.scores[module.id]}

@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { Shield, LogOut, User, Info } from 'lucide-react';
+import { LogOut, User, Info } from 'lucide-react';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -24,12 +25,16 @@ export const Layout: React.FC<LayoutProps> = ({
       <header className="bg-unad-primary text-white shadow-md sticky top-0 z-50 border-b-4 border-unad-accent">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div 
-            className="flex items-center gap-2 cursor-pointer hover:opacity-90 transition-opacity"
+            className="flex items-center gap-3 cursor-pointer hover:opacity-90 transition-opacity"
             onClick={onNavigateHome}
           >
-            {/* Accent color for the Logo Icon */}
-            <Shield className="w-8 h-8 text-unad-accent" />
-            <h1 className="text-xl font-bold tracking-tight">CyberHigiene <span className="text-unad-accent">UNAD</span></h1>
+            {/* Official UNAD Logo from reliable source */}
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Logo_unad.png" 
+              alt="UNAD Logo" 
+              className="h-10 w-auto bg-white rounded-md p-0.5"
+            />
+            <h1 className="text-xl font-bold tracking-tight hidden sm:block">CyberHigiene <span className="text-unad-accent">UNAD</span></h1>
           </div>
           
           <div className="flex items-center gap-4">
